@@ -6,6 +6,10 @@ pub enum Error {
     #[error("Failed to connect to the db because: {0}")]
     Connection(#[from] sqlx::Error),
 }
+
+// Todo: Either hold a generic pool here so you can instantiate it to different dbs
+// Or use a generic context downstream and mock it in tests with a dummy context
+
 pub struct Context {
     pool: Pool<Postgres>,
 }

@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS tasks (
-    id INT NOT NULL PRIMARY KEY ,
+    id SERIAL NOT NULL PRIMARY KEY ,
     title VARCHAR(255) NOT NULL,
     task_type INT NOT NULL,
     status INT NOT NULL,
